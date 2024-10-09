@@ -50,10 +50,21 @@ A: For example, I want to design a security architecture, I would use a combinat
 
 Q: What is the difference between IAM users, groups, roles and policies ?
 
-A: IAM User: An IAM user is an identity within AWS that represents an individual or application needing access to AWS resources. IAM users have permanent long-term credentials, such as a username and password, or access keys (Access Key ID and Secret Access Key). IAM users can be assigned directly to IAM policies or added to IAM groups for easier management of permissions.
-   IAM Role: An IAM role is similar to an IAM user but is not associated with a specific individual. Instead, it is assumed by entities such as IAM users, applications, or services to obtain temporary security credentials. IAM roles are useful when you want to grant permissions to entities that are external to your AWS account or when you want to delegate access to AWS resources across accounts. IAM roles have policies attached to them that define the permissions granted when the role is assumed.
-   IAM Group: An IAM group is a collection of IAM users. By organizing IAM users into groups, you can manage permissions collectively. IAM groups make it easier to assign permissions to multiple users simultaneously. Users within an IAM group inherit the permissions assigned to that group. For example, you can create a "Developers" group and assign appropriate policies to grant permissions required for developers across your organization.
-   IAM Policy: An IAM policy is a document that defines permissions and access controls in AWS. IAM policies can be attached to IAM users, IAM roles, and IAM groups to define what actions can be performed on which AWS resources. IAM policies use JSON (JavaScript Object Notation) syntax to specify the permissions and can be created and managed independently of the users, roles, or groups. IAM policies consist of statements that include the actions allowed or denied, the resources on which the actions can be performed, and any additional conditions.
+A: IAM User: An IAM user is an identity within AWS that represents an individual or application needing access to AWS resources.
+             IAM users have permanent long-term credentials, such as a username and password, or access keys (Access Key ID and Secret Access Key). 
+             IAM users can be assigned directly to IAM policies or added to IAM groups for easier management of permissions.
+   IAM Role: An IAM role is similar to an IAM user but is not associated with a specific individual.
+             Instead, it is assumed by entities such as IAM users, applications, or services to obtain temporary security credentials. 
+             IAM roles are useful when you want to grant permissions to entities that are external to your AWS account or when you want to delegate access to AWS resources across accounts. 
+             IAM roles have policies attached to them that define the permissions granted when the role is assumed.
+   IAM Group: An IAM group is a collection of IAM users. By organizing IAM users into groups, you can manage permissions collectively. 
+              IAM groups make it easier to assign permissions to multiple users simultaneously.
+              Users within an IAM group inherit the permissions assigned to that group. 
+              For example, you can create a "Developers" group and assign appropriate policies to grant permissions required for developers across your organization.
+   IAM Policy: An IAM policy is a document that defines permissions and access controls in AWS.
+               IAM policies can be attached to IAM users, IAM roles, and IAM groups to define what actions can be performed on which AWS resources.
+               IAM policies use JSON (JavaScript Object Notation) syntax to specify the permissions and can be created and managed independently of the users, roles, or groups. 
+               IAM policies consist of statements that include the actions allowed or denied, the resources on which the actions can be performed, and any additional conditions.
 
 Q: You have a private subnet in your VPC that contains a number of instances that should not have direct internet access. However, you still need to be able to securely access these instances for administrative purposes. How would you set up a bastion host to facilitate this access?
 
